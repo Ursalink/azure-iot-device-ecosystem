@@ -1,10 +1,10 @@
 ---
 platform: {Linux Openwrt}
-device: {Ursalink UR72}
+device: {Ursalink UR7X}
 language: c
 ---
 
-Run a simple C sample on UR72 device running Linux
+Run a simple C sample on UR7X device running Linux
 ===
 ---
 
@@ -21,7 +21,7 @@ Run a simple C sample on UR72 device running Linux
 
 **About this document**
 
-This document describes how to connect Ursalink UR72 device running Linux with Azure IoT SDK. This multi-step process includes:
+This document describes how to connect Ursalink UR7X device running Linux with Azure IoT SDK. This multi-step process includes:
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
 -   Build and deploy Azure IoT SDK on device
@@ -34,11 +34,11 @@ You should have the following items ready before beginning the process:
 -   [Prepare your development environment][setup-devbox-linux]
 -   [Setup your IoT hub][lnk-setup-iot-hub]
 -   [Provision your device and get its credentials][lnk-manage-iot-hub]
--   Ursalink UR72 device.
+-   Ursalink UR7X device.
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
--   The URL for the device is http://www.ursalink.com/industrial-cellular-router-ur72/ Connect the Ursalink UR72 using the ssh with putty.
+-   The URL for the device is http://www.ursalink.com/industrial-cellular-router-ur72/ Connect the Ursalink UR7X using the ssh with putty.
 
 <a name="Build"></a>
 # Step 3: Build and Run the sample
@@ -51,7 +51,7 @@ You should have the following items ready before beginning the process:
         sudo apt-get install -y curl uuid-dev libcurl4-openssl-dev build-essential cmake git
 
 ### 3.1.2 Install the Cross Compilation Toolchain
-        tar -xzvf toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16.tar.gz -C /opt
+        sudo tar -xzvf toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16.tar.gz -C /opt
         
         export PATH=$PATH:/opt/staging_dir/toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16/bin
        
@@ -80,11 +80,41 @@ build project:
 ## 3.2 Running the sample
 
 ### 3.2.1 Send Device Events to IoT Hub
--   Copy these samples to UR72 from ubuntu tftpboot and run them.
+#### Copy these samples to UR7X from ubuntu and run them
+-   For AMQP protocol:
+
+         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp
+         
+         ./iothub_client_sample_amqp
+         
+-   For HTTP protocol:
+
+         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http
+         
+         ./iothub_client_sample_http
+         
+-   For MQTT protocol:
+
+         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt
+         
+         ./iothub_client_sample_mqtt
+         
+-   For WebSocket with AMQP protocol:
+
+         copy .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp_websockets/iothub_client_sample_amqp_websockets
+         
+         ./iothub_client_sample_amqp_websockets
+         
+-   For WebSocket with MQTT protocol:
+
+         copy .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets
+         
+         ./iothub_client_sample_mqtt_websockets
+         
 
 ### 3.2.2 Receive messages from IoT Hub
 
--   See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to send cloud-to-device messages to the application.
+##### See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to send cloud-to-device messages to the application.
 
 
 
