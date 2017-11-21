@@ -46,6 +46,7 @@ You should have the following items ready before beginning the process:
 <a name="Load"></a>
 ## 3.1 Build SDK on Ubuntu machine
 ### 3.1.1 Setup the development environment
+
         sudo apt-get update
 
         sudo apt-get install -y curl uuid-dev libcurl4-openssl-dev build-essential cmake git
@@ -79,41 +80,44 @@ build project:
 
 ## 3.2 Running the sample
 
-### 3.2.1 Send Device Events to IoT Hub
-#### Copy these samples to UR7X from ubuntu and run them
+### 3.2.1 Use "tftp" command copy files from Ubuntu tftpboot to UR7X device
+
+        tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp 192.168.2.166
+
+
+        tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http 192.168.2.166
+
+        tftp -gr copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt 192.168.2.166
+
+        tftp -gr.cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp_websockets/iothub_client_sample_amqp_websockets 192.168.2.166
+
+        tftp - .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets 192.168.2.166
+         
+
+### 3.2.2 Send Device Events to IoT Hub
+#### Run the sample application using the following command
+
 -   For AMQP protocol:
 
-         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp
-         
-         ./iothub_client_sample_amqp
-         
+        ./iothub_client_sample_amqp
+        
 -   For HTTP protocol:
 
-         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http
-         
-         ./iothub_client_sample_http
-         
+        ./iothub_client_sample_http
+        
 -   For MQTT protocol:
 
-         copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt
-         
-         ./iothub_client_sample_mqtt
-         
--   For WebSocket with AMQP protocol:
+        ./iothub_client_sample_mqtt
+        
+-   For WebSocket with AMQP protocol
 
-         copy .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp_websockets/iothub_client_sample_amqp_websockets
-         
-         ./iothub_client_sample_amqp_websockets
-         
--   For WebSocket with MQTT protocol:
+        ./iothub_client_sample_amqp_websockets
+        
+-   For WebSocket with MQTT protocol
 
-         copy .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets
-         
-         ./iothub_client_sample_mqtt_websockets
-         
-
-### 3.2.2 Receive messages from IoT Hub
-
+        ./iothub_client_sample_mqtt_websockets
+        
+### 3.2.3 Receive messages from IoT Hub
 ##### See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to send cloud-to-device messages to the application.
 
 
