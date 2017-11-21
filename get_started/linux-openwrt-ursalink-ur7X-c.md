@@ -80,7 +80,7 @@ build project:
 
 ## 3.2 Running the sample
 
-### 3.2.1 Use "tftp" command copy files from Ubuntu tftpboot to UR7X device
+### 3.2.1 Use "tftp" command to copy files from the sample's directory on Ubuntu to UR7X device
 
         tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp 192.168.2.166
 
