@@ -86,11 +86,11 @@ build project:
 
         tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http 192.168.2.166
 
-        tftp -gr copy ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt 192.168.2.166
+        tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt 192.168.2.166
 
         tftp -gr.cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp_websockets/iothub_client_sample_amqp_websockets 192.168.2.166
 
-        tftp - .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets 192.168.2.166
+        tftp -gr .cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets 192.168.2.166
          
 
 ### 3.2.2 Send Device Events to IoT Hub
