@@ -99,18 +99,23 @@ Build project:
 #### Run the sample application using the following command
 
 -   For AMQP protocol:
+
         ./iothub_client_sample_amqp
         
 -   For HTTP protocol:
+
         ./iothub_client_sample_http
         
 -   For MQTT protocol:
+
         ./iothub_client_sample_mqtt
         
 -   For WebSocket with AMQP protocol
+
         ./iothub_client_sample_amqp_websockets
         
 -   For WebSocket with MQTT protocol
+
         ./iothub_client_sample_mqtt_websockets
         
 ### 3.2.3 Receive messages from IoT Hub
