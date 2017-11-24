@@ -34,11 +34,11 @@ You should have the following items ready before beginning the process:
 -   [Prepare your development environment][setup-devbox-python]
 -   [Setup your IoT hub][lnk-setup-iot-hub]
 -   [Provision your device and get its credentials][lnk-manage-iot-hub]
--   UR7x device.
+-   UR7x device
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
--  The URL for the device is http://www.ursalink.com/industrial-cellular-router-ur71/ Connect the Ursalink UR7x using the ssh with putty.
+-  The URL for the device is http://www.ursalink.com/industrial-cellular-router-ur71/ Connect the Ursalink UR7x using the ssh with putty
 <a name="Build"></a>
 # Step 3: Build and Run the sample
 
