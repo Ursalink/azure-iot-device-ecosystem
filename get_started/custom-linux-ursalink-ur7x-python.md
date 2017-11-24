@@ -51,7 +51,7 @@ You should have the following items ready before beginning the process:
      
 ### 3.1.2 Install the Cross Compilation Toolchain
 
-       tar -xjvf toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16.tar.gz -C /opt
+       tar -xzvf toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16.tar.gz -C /opt
        export PATH=$PATH:/opt/staging_dir/toolchain-aarch64_armv8-a_gcc-5.4.0_musl-1.1.16/bin
        
 ### 3.1.3 Clone github repository
@@ -99,15 +99,15 @@ Build project:
 
 -   For AMQP protocol:
 
-        python iothub_client_sample_amqp.py
+        python iothub_client_sample.py -p amqp
         
 -   For HTTP protocol:
 
-        python iothub_client_sample_http.py
+        python iothub_client_sample.py -p http
         
 -   For MQTT protocol:
 
-        python iothub_client_sample_mqtt.py        
+        python iothub_client_sample.py -p mqtt        
         
 ### 3.2.3 Receive messages from IoT Hub
 -   See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to send cloud-to-device messages to the application.
