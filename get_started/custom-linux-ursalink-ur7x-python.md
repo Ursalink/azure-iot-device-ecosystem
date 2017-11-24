@@ -89,34 +89,25 @@ Build project:
 ## 3.2 Running the Sample
 ### 3.2.1 Use "tftp" command to copy files from the sample's directory on Ubuntu to UR7X device
 
-       tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp 192.168.2.166
-       tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http 192.168.2.166
-       tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt 192.168.2.166
-       tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp_websockets/iothub_client_sample_amqp_websockets 192.168.2.166
-       tftp -gr ./cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt_websockets/iothub_client_sample_mqtt_websockets 192.168.2.166
+       tftp -gr ./device/samples/iothub_client.so 192.168.2.166
+       tftp -gr ./device/samples/iothub_client_args.py 192.168.2.166
+       tftp -gr ./device/samples/iothub_client_cert.py 192.168.2.166
+       tftp -gr ./device/samples/iothub_client_sample.py 192.168.2.166
 
 ### 3.2.2 Send Device Events to IoT Hub
 #### Run the sample application using the following command
 
 -   For AMQP protocol:
 
-        ./iothub_client_sample_amqp
+        python iothub_client_sample_amqp.py
         
 -   For HTTP protocol:
 
-        ./iothub_client_sample_http
+        python iothub_client_sample_http.py
         
 -   For MQTT protocol:
 
-        ./iothub_client_sample_mqtt
-        
--   For WebSocket with AMQP protocol
-
-        ./iothub_client_sample_amqp_websockets
-        
--   For WebSocket with MQTT protocol
-
-        ./iothub_client_sample_mqtt_websockets
+        python iothub_client_sample_mqtt.py        
         
 ### 3.2.3 Receive messages from IoT Hub
 -   See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to send cloud-to-device messages to the application.
