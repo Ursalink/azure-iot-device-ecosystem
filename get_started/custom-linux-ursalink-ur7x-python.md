@@ -4,7 +4,7 @@ device: {Usalink industrial cellular router ur7x}
 language: python
 ---
 
-Run a simple PYTHON sample on Ursalink UR7x device running Linux
+Run a simple PYTHON sample on Usalink Industrial Cellular Router UR7x device running Linux
 ===
 ---
 
