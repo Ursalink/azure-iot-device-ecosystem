@@ -39,7 +39,7 @@ You should have the following items ready before beginning the process:
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
 
--   The URL for the device is <http://www.ursalink.com/industrial-cellular-router-ur72/>. Connect the Usalink Industrial Cellular Router UR72 using the SSH with putty.
+-   The URL for the device is <http://www.ursalink.com/industrial-cellular-router-ur72/> Connect the Usalink Industrial Cellular Router UR72 using the SSH with putty.
 
 <a name="Build"></a>
 # Step 3: Build and Run the sample
